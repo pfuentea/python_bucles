@@ -47,11 +47,12 @@ def count_flex(lowNum, highNum, mult):
 def primo(n):    
     for i in range(2,n):
         if(n%i==0):
+           #i print (i, " divide a ",n)
             return False
     return True
 
 def n_primos():
-    for i in range(2,1000):
+    for i in range(2,1002):
         if primo(i)==True:
             print(i)
 
