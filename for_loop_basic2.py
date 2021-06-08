@@ -45,8 +45,19 @@ def maximo(p_lista):
         return False
 
 def ultimate_analysis(p_lista):
-     return 'total:'+ str(sum_total(p_lista)) + ', promedio:'+ str(promedio(p_lista))+ ', minimo:' + str(minimo(p_lista))+ ', maximo:'+str(maximo(p_lista)) + ', longitud:'+ str(longitud(p_lista))
+    return 'total:'+ str(sum_total(p_lista)) + ', promedio:'+ str(promedio(p_lista))+ ', minimo:' + str(minimo(p_lista))+ ', maximo:'+str(maximo(p_lista)) + ', longitud:'+ str(longitud(p_lista))
     
+def reverse_list(p_lista):
+    v_ultimo=len(p_lista)-1
+    v_indice=0
+    while v_indice < v_ultimo:
+        v_aux=p_lista[v_indice]
+        p_lista[v_indice]=p_lista[v_ultimo-v_indice]
+        p_lista[v_ultimo-v_indice]=v_aux
+        v_indice+=1
+        v_ultimo-=1
+    return p_lista
+
 
 #print(biggie_size([- 1, 3, 5, -5]))
 #print(count_positives ([- 1,1,1,1]))
@@ -55,4 +66,6 @@ def ultimate_analysis(p_lista):
 #print(longitud ([37,2,1, -9]))
 #print( minimo ([37,2,1, -9]))
 #print(maximo ([37,2,1, -9]))
-print(ultimate_analysis ([37,2,1, -9]) )
+#print(ultimate_analysis ([37,2,1, -9]) )
+#
+print(reverse_list ([37,2,1, -9]) )
